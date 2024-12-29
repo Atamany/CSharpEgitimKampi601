@@ -41,12 +41,12 @@
             this.txtMusteriTutar = new System.Windows.Forms.TextBox();
             this.lblAlisverisTutari = new System.Windows.Forms.Label();
             this.btnListele = new System.Windows.Forms.Button();
-            this.btnGetById = new System.Windows.Forms.Button();
             this.btnGuncelle = new System.Windows.Forms.Button();
             this.btnSil = new System.Windows.Forms.Button();
             this.btnEkle = new System.Windows.Forms.Button();
-            this.dataGridView2 = new System.Windows.Forms.DataGridView();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
+            this.DataGridView1 = new System.Windows.Forms.DataGridView();
+            this.btnGetById = new System.Windows.Forms.Button();
+            ((System.ComponentModel.ISupportInitialize)(this.DataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // lblMusteriId
@@ -162,18 +162,7 @@
             this.btnListele.TabIndex = 12;
             this.btnListele.Text = "Listele";
             this.btnListele.UseVisualStyleBackColor = false;
-            // 
-            // btnGetById
-            // 
-            this.btnGetById.BackColor = System.Drawing.SystemColors.GrayText;
-            this.btnGetById.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.btnGetById.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnGetById.Location = new System.Drawing.Point(174, 396);
-            this.btnGetById.Name = "btnGetById";
-            this.btnGetById.Size = new System.Drawing.Size(200, 36);
-            this.btnGetById.TabIndex = 13;
-            this.btnGetById.Text = "ID\'ye Göre Getir";
-            this.btnGetById.UseVisualStyleBackColor = false;
+            this.btnListele.Click += new System.EventHandler(this.btnListele_Click);
             // 
             // btnGuncelle
             // 
@@ -186,6 +175,7 @@
             this.btnGuncelle.TabIndex = 14;
             this.btnGuncelle.Text = "Güncelle";
             this.btnGuncelle.UseVisualStyleBackColor = false;
+            this.btnGuncelle.Click += new System.EventHandler(this.btnGuncelle_Click);
             // 
             // btnSil
             // 
@@ -198,6 +188,7 @@
             this.btnSil.TabIndex = 15;
             this.btnSil.Text = "Sil";
             this.btnSil.UseVisualStyleBackColor = false;
+            this.btnSil.Click += new System.EventHandler(this.btnSil_Click);
             // 
             // btnEkle
             // 
@@ -212,23 +203,36 @@
             this.btnEkle.UseVisualStyleBackColor = false;
             this.btnEkle.Click += new System.EventHandler(this.btnEkle_Click);
             // 
-            // dataGridView2
+            // DataGridView1
             // 
-            this.dataGridView2.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView2.Location = new System.Drawing.Point(404, 61);
-            this.dataGridView2.Name = "dataGridView2";
-            this.dataGridView2.RowHeadersWidth = 51;
-            this.dataGridView2.RowTemplate.Height = 24;
-            this.dataGridView2.Size = new System.Drawing.Size(908, 371);
-            this.dataGridView2.TabIndex = 18;
+            this.DataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.DataGridView1.Location = new System.Drawing.Point(404, 61);
+            this.DataGridView1.Name = "DataGridView1";
+            this.DataGridView1.RowHeadersWidth = 51;
+            this.DataGridView1.RowTemplate.Height = 24;
+            this.DataGridView1.Size = new System.Drawing.Size(908, 371);
+            this.DataGridView1.TabIndex = 18;
+            // 
+            // btnGetById
+            // 
+            this.btnGetById.BackColor = System.Drawing.SystemColors.GrayText;
+            this.btnGetById.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btnGetById.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnGetById.Location = new System.Drawing.Point(174, 396);
+            this.btnGetById.Name = "btnGetById";
+            this.btnGetById.Size = new System.Drawing.Size(200, 36);
+            this.btnGetById.TabIndex = 13;
+            this.btnGetById.Text = "ID\'ye Göre Getir";
+            this.btnGetById.UseVisualStyleBackColor = false;
+            this.btnGetById.Click += new System.EventHandler(this.btnGetById_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1324, 501);
-            this.Controls.Add(this.dataGridView2);
+            this.ClientSize = new System.Drawing.Size(1324, 448);
+            this.Controls.Add(this.DataGridView1);
             this.Controls.Add(this.btnEkle);
             this.Controls.Add(this.btnSil);
             this.Controls.Add(this.btnGuncelle);
@@ -249,7 +253,7 @@
             this.Name = "Form1";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -270,11 +274,11 @@
         private System.Windows.Forms.TextBox txtMusteriTutar;
         private System.Windows.Forms.Label lblAlisverisTutari;
         private System.Windows.Forms.Button btnListele;
-        private System.Windows.Forms.Button btnGetById;
         private System.Windows.Forms.Button btnGuncelle;
         private System.Windows.Forms.Button btnSil;
         private System.Windows.Forms.Button btnEkle;
-        private System.Windows.Forms.DataGridView dataGridView2;
+        private System.Windows.Forms.DataGridView DataGridView1;
+        private System.Windows.Forms.Button btnGetById;
     }
 }
 
